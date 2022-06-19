@@ -1,0 +1,52 @@
+body {
+    font-family: 'EB Garamond', sans-serif;
+}
+
+h3 {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a :hover {
+    text-decoration: none;
+    color: black;
+}
+
+#page-header {
+    padding-top: 16px;
+    padding-left: 20px;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-color: lightgray;
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: white;
+}
+
+#header-nav {
+    float: right;
+    padding-top: 8px;
+    padding-right: 40px;
+}
+
+#content {
+    top: 15rem;
+    height: 100%;
+    display: block;   
+}
+
+.button {
+    text-transform: none;
+    font-size: small;
+    border-style: none;
+    border-bottom-style: solid;
+    width: 10rem;
+    padding: 0rem;
+    text-align: center;
+}
