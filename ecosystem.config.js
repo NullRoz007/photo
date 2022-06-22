@@ -2,10 +2,26 @@ module.exports = {
   apps : [
     {
         name: "Medusa Backend",
-        script: "npm",
-        args: "start",
+        script: "../backend.js",
         cwd: "./martin-photography/"
-    }],
+    },  
+    {
+      name: "Web Server",
+      script: "../frontend.js",
+      cwd: "./martin-photography-frontend/",
+      watch: true,
+    },
+    {
+      name: "Medusa Admin",
+      script: "../admin.js",
+      cwd: "./medusa-admin/"
+    },
+    {
+      name: "MinIO",
+      script: "../minio.js",
+      cwd: "./minio/"
+    }
+],
   deploy : {
     production : {
       user : 'SSH_USERNAME',
