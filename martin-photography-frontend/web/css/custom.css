@@ -2,6 +2,10 @@ body {
     font-family: 'EB Garamond', sans-serif;
 }
 
+button {
+    text-transform: none;
+}
+
 h3 {
     display: inline-block;
 }
@@ -49,4 +53,93 @@ a :hover {
     width: 10rem;
     padding: 0rem;
     text-align: center;
+}
+
+
+.gallery-controls {
+    display: inline;
+}
+
+.button#controlbutton{
+    display: inline;
+    text-transform: none;
+    font-size:x-large;
+    border-style: none;
+    text-align: center;
+    color: transparent;
+
+
+    background: url("/images/web-maintenance.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+
+
+    margin-left: 5px;
+    float: right;
+}
+
+#radial {
+    border-radius: 25%;
+    border-width: 2px;
+    height: 65px;
+    border-color: lightgrey;
+}
+
+.frame-color {
+    align-self: center;
+    border-radius: 25%;
+    border-width: 2px;
+    height: 65px;
+    border-color: lightgrey;
+    
+}
+
+#black {
+    background-color: black;
+}
+
+#white {
+    background-color:antiquewhite;
+}
+
+#beige {
+    background-color: beige;
+}
+
+
+
+.gallery-config {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-style: solid;
+    z-index: 1;
+
+    width: 20rem;
+    height: 15rem;
+
+    
+}
+
+.gallery-entry {
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 2px;
+}
+
+.show-gallery-config {
+    display:block;
+    left: 85%;
+    border-radius: 5px;
+    border-style: none;
+
+    border-top: 1px;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-top-style: solid;
+
+    padding: 10px;
+    text-align: left;
+
+    
 }

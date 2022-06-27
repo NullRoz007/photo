@@ -33,7 +33,7 @@ function create_gallery(callback) {
             <div class="four columns">
                 <h4>`+title+`</h4>
                 <p>`+description+`</p>
-                <img src=`+image0+` style="width:256px;height:256px;"></img>
+                <img class="gallery-entry" src=`+image0+` style="width:256px;height:256px;"></img>
             </div>`;
         }
 
@@ -42,13 +42,29 @@ function create_gallery(callback) {
     });
 }
 
+var showing_config = false;
+
 //wait for DOM to load
-document.onreadystatechange = (state) => {
-    if(document.readyState == "complete") {
-        create_gallery(html => {
-            //retreive gallery container & append grid html
-            let gallery = document.getElementById('content');
-            gallery.innerHTML += html;
+$(document).ready(() => {
+    create_gallery(html => {
+        //retreive gallery container & append grid html
+        let gallery = document.getElementById('content');
+        gallery.innerHTML += html;
+
+        //attach show/hide classes to gallery-config
+        $("#controlbutton").on('click', () => {
+            if(!showing_config) {
+                $("#gallery-config-dd").addClass("show-gallery-config");
+                showing_config = true;
+            } else {
+                $("#gallery-config-dd").removeClass("show-gallery-config");
+                showing_config = false;
+            }
         });
-    }
-};
+
+        let btn_array = $(".frame-color").get();
+        btn_array.forEach(btn => {
+            console.log(btn.backgroundColor);
+        });
+    });
+});
